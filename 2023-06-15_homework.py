@@ -3,7 +3,7 @@ def arith(arr):
 
 
 def factorial(n):
-    if n <= 0 and n % 2 == 0:
+    if n <= 0 or n % 2 != 0:
         return "Факториал может быть расчитан только из целого положительного числа"
     else:
         result = 1
