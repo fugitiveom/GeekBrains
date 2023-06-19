@@ -18,5 +18,5 @@ def second_major2(arr):
     return fst_major, scnd_major
 
 
-#print(second_major([21, 2, 6, 8, 1000, 7, 5, 6, 2, 4, 5, 6, 9, 110]))
+print(second_major([21, 2, 6, 8, 1000, 7, 5, 6, 2, 4, 5, 6, 9, 110]))
 print(second_major2([21, 2, 6, 8, 1000, 7, 5, 6, 2, 4, 5, 6, 9, 110]))
