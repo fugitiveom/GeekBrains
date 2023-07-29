@@ -15,10 +15,9 @@ input('Теперь мы будем перечислять монетки. Вв�
       'и 1, - если решки. Нажмите любую клавишу для продолжения...')
 
 for coin in range(1,coin_qnty+1):
-    while True:
-        if answer != 0 or answer != 1:
-            answer = int(input(f'{coin}-я монетка - 1 или 0?: '))
-            break
+    answer = int(input(f'{coin}-я монетка - 1 или 0?: '))
+    while answer != 0 and answer != 1:
+        answer = int(input(f'Вы ввели {answer} вместо 0 или 1. Введите 0 или 1: '))
     qnty_of_1 += 1 if answer == 1 else 0
 
 result = qnty_of_1 if coin_qnty / 2 >= qnty_of_1 else coin_qnty - qnty_of_1
