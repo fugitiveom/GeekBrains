@@ -10,3 +10,14 @@
 # 10     -> 1,2,4,8,
 # 10000  -> 1,2,4,8,16,32,64,128,256,512,1024,2048,4096,8192,
 
+N = 10000
+k = 0
+result = 0
+
+for i in range(N):
+    result = 2 ** k
+    if result < N:
+        print(result, end=' ')
+        k += 1
+    else:
+        break
