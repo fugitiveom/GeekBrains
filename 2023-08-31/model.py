@@ -1,12 +1,8 @@
+import json
+
 class PhonebookModel:
     def __init__(self):
         self.contacts = {}
-
-    def show_phonebook(self, lang: dict):
-        for key, value in self.contacts.items():
-            print(key, ':')
-            for key, value in value.items():
-                print('\t', lang[key], value)
 
     def add_record(self, user_data: dict):
         data = {}
@@ -16,15 +12,23 @@ class PhonebookModel:
     def remove_record(self, name_surname: str):
         pass
 
-    def search_for_record(self, request: str, lang: dict):
+    def search_for_record(self, request: str) -> dict:
         found = {}
         for key, value in self.contacts.items():
             if request in key:
-                print(key, ':')
-                found.update(f'{key}: {value}')
-                for key, value in value.items():
-                    print('\t', lang[key], value)
+                found[key] = value
         return found
 
-    def edit_record(self):
-        print('Working edit record')
+    def edit_records(self, record: dict, new_data: dict):
+        for key, value in record.items():
+            for sub_key, _ in value.items():
+                if new_data[sub_key] != '':
+                    record[key][sub_key] = new_data[sub_key]
+    
+    def export_to_file(self, path):
+        with open(path, 'w') as file:
+            json.dump(self.contacts, file, indent=4)
+
+    def import_from_file(self, path):
+        with open(path, 'r') as file:
+            self.contacts = json.load(file)
