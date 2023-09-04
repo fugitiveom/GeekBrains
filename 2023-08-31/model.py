@@ -26,9 +26,9 @@ class PhonebookModel:
                     record[key][sub_key] = new_data[sub_key]
     
     def export_to_file(self, path):
-        with open(path, 'w') as file:
+        with open(path, 'w', encoding='utf8') as file:
             json.dump(self.contacts, file, indent=4)
 
     def import_from_file(self, path):
-        with open(path, 'r') as file:
+        with open(path, 'r', encoding='utf8') as file:
             self.contacts = json.load(file)
