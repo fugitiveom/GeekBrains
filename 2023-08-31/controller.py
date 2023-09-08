@@ -12,7 +12,8 @@ class PhoneBookController:
 
     def run(self):
         while True:
-            user_choice = self.view.get_user_choise(self.lang['main_menu'], self.lang['enter'])
+            user_choice = self.view.get_user_choise(self.lang['main_menu'], \
+                                                    self.lang['enter'])
             self.handle_user_input(user_choice)
 
     def handle_user_input(self, cmd):
@@ -43,28 +44,33 @@ class PhoneBookController:
 
     def _cmd_search_for_record(self):
         found_records = self._call_search()
-        self.view.show_records(found_records, self.lang['record'], self.lang['search']['found_records'])
+        self.view.show_records(found_records, self.lang['record'], \
+                               self.lang['search']['found_records'])
 
     def _cmd_edit_record(self):
         found_record: dict = self._call_search()
-        self.view.show_records(found_record, self.lang['record'], self.lang['search']['found_records'])
+        self.view.show_records(found_record, self.lang['record'], \
+                               self.lang['search']['found_records'])
         record_data = {}
         while len(found_record.keys()) > 1:
             if len(found_record.keys()) > 1:
                 self.view.show_message(self.lang['error']['too_many_records'])
                 found_record: dict = self._call_search()
-                self.view.show_records(found_record, self.lang['record'], self.lang['search']['found_records'])
+                self.view.show_records(found_record, self.lang['record'], \
+                                       self.lang['search']['found_records'])
         for key, value in self.lang['record'].items():
             record_data[key] = self.view.get_user_input(value, self.lang['enter'])
         self.model.edit_records(found_record, record_data)
 
     def _cmd_export_to_file(self):
-        file_name = self.view.get_user_input(self.lang['file']['export'], self.lang['enter'])
+        file_name = self.view.get_user_input(self.lang['file']['export'], \
+                                             self.lang['enter'])
         path = os.path.join('.', file_name)
         self.model.export_to_file(path)
 
     def _cmd_import_from_file(self):
-        file_name = self.view.get_user_input(self.lang['file']['import'], self.lang['enter'])
+        file_name = self.view.get_user_input(self.lang['file']['import'], \
+                                             self.lang['enter'])
         path = os.path.join('.', file_name)
         self.model.import_from_file(path)
 
