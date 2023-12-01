@@ -1,0 +1,20 @@
+2023-12-02 01:47:44,367,__main__,<module>,DEBUG:	Args from command: Namespace(path='.')
+2023-12-02 01:47:44,367,__main__,<module>,DEBUG:	Full path is C:\Users\fugit\PycharmProjects\GeekBrains\2023-11-30
+2023-12-02 01:47:44,367,__main__,<module>,DEBUG:	Calling listing with path: C:\Users\fugit\PycharmProjects\GeekBrains\2023-11-30
+2023-12-02 01:47:44,367,__main__,listing,DEBUG:	Root: C:\Users\fugit\PycharmProjects\GeekBrains\2023-11-30
+2023-12-02 01:47:44,367,__main__,listing,DEBUG:	Item with path C:\Users\fugit\PycharmProjects\GeekBrains\2023-11-30\task1.py
+2023-12-02 01:47:44,367,__main__,listing,DEBUG:	Adding file object FSObject(name='task1', parrent='C:\\Users\\fugit\\PycharmProjects\\GeekBrains\\2023-11-30', ext='.py', isdir=False)
+2023-12-02 01:47:44,367,__main__,listing,DEBUG:	Item with path C:\Users\fugit\PycharmProjects\GeekBrains\2023-11-30\task2.py
+2023-12-02 01:47:44,368,__main__,listing,DEBUG:	Adding file object FSObject(name='task2', parrent='C:\\Users\\fugit\\PycharmProjects\\GeekBrains\\2023-11-30', ext='.py', isdir=False)
+2023-12-02 01:47:44,368,__main__,listing,DEBUG:	Item with path C:\Users\fugit\PycharmProjects\GeekBrains\2023-11-30\task3.py
+2023-12-02 01:47:44,368,__main__,listing,DEBUG:	Adding file object FSObject(name='task3', parrent='C:\\Users\\fugit\\PycharmProjects\\GeekBrains\\2023-11-30', ext='.py', isdir=False)
+2023-12-02 01:47:44,368,__main__,listing,DEBUG:	Item with path C:\Users\fugit\PycharmProjects\GeekBrains\2023-11-30\test
+2023-12-02 01:47:44,370,__main__,listing,DEBUG:	Adding dir object FSObject(name='test', parrent='C:\\Users\\fugit\\PycharmProjects\\GeekBrains\\2023-11-30', ext=None, isdir=True)
+2023-12-02 01:47:44,370,__main__,listing,DEBUG:	Calling self with path C:\Users\fugit\PycharmProjects\GeekBrains\2023-11-30\test
+2023-12-02 01:47:44,370,__main__,listing,DEBUG:	Root: C:\Users\fugit\PycharmProjects\GeekBrains\2023-11-30\test
+2023-12-02 01:47:44,370,__main__,listing,DEBUG:	Item with path C:\Users\fugit\PycharmProjects\GeekBrains\2023-11-30\test\test.py
+2023-12-02 01:47:44,370,__main__,listing,DEBUG:	Adding file object FSObject(name='test', parrent='C:\\Users\\fugit\\PycharmProjects\\GeekBrains\\2023-11-30\\test', ext='.py', isdir=False)
+2023-12-02 01:47:44,370,__main__,listing,DEBUG:	Returning [FSObject(name='test', parrent='C:\\Users\\fugit\\PycharmProjects\\GeekBrains\\2023-11-30\\test', ext='.py', isdir=False)]
+2023-12-02 01:47:44,370,__main__,listing,DEBUG:	Item with path C:\Users\fugit\PycharmProjects\GeekBrains\2023-11-30\__main__.txt
+2023-12-02 01:47:44,371,__main__,listing,DEBUG:	Adding file object FSObject(name='__main__', parrent='C:\\Users\\fugit\\PycharmProjects\\GeekBrains\\2023-11-30', ext='.txt', isdir=False)
+2023-12-02 01:47:44,371,__main__,listing,DEBUG:	Returning [FSObject(name='task1', parrent='C:\\Users\\fugit\\PycharmProjects\\GeekBrains\\2023-11-30', ext='.py', isdir=False), FSObject(name='task2', parrent='C:\\Users\\fugit\\PycharmProjects\\GeekBrains\\2023-11-30', ext='.py', isdir=False), FSObject(name='task3', parrent='C:\\Users\\fugit\\PycharmProjects\\GeekBrains\\2023-11-30', ext='.py', isdir=False), FSObject(name='test', parrent='C:\\Users\\fugit\\PycharmProjects\\GeekBrains\\2023-11-30', ext=None, isdir=True), [FSObject(name='test', parrent='C:\\Users\\fugit\\PycharmProjects\\GeekBrains\\2023-11-30\\test', ext='.py', isdir=False)], FSObject(name='__main__', parrent='C:\\Users\\fugit\\PycharmProjects\\GeekBrains\\2023-11-30', ext='.txt', isdir=False)]
